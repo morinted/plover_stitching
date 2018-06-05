@@ -13,22 +13,24 @@ Stitched Fingerspelling
 ``{:stitch:letter:delimiter?}``
 
 -  **letter**: the letter or word to fingerspell
--  **delimiter** *(optional)*: the character or word to join stitched letters with, *defaults to hyphen*
+-  **delimiter** *(optional)*: the character or word to join stitched letters with, *defaults to -*
 
 Examples
 ^^^^^^^^
 
 - Stitched capital letter alphabet
 
-    - {:stitch:A}{:stitch:B} → A-B
+  - {:stitch:A}{:stitch:B} → A-B
+
 - Joining repeated words
 
-    - {:stitch:ha} → ha
-    - {:stitch:ha}{:stitch:ha}{:stitch:ha} → ha-ha-ha
+  - {:stitch:ha} → ha
+  - {:stitch:ha}{:stitch:ha}{:stitch:ha} → ha-ha-ha
+
 - Custom delimiter
 
-    - {:stitch:lol:o} → lol
-    - {:stitch:lol:o}{:stitch:lol:o}{:stitch:lol:o} → lololololol
+  - {:stitch:lol:o} → lol
+  - {:stitch:lol:o}{:stitch:lol:o}{:stitch:lol:o} → lololololol
 
 
 Stitch Last Words
@@ -36,21 +38,23 @@ Stitch Last Words
 
 ``{:stitch_last_word:count?:delimiter?}``
 
-- **count**: number of previous words to stitch, *defaults to 1*
-- **delimiter** *(optional)*: the character or word to join stitched letters with, *defaults to hyphen*
+- **count** *(optional)*: number of previous words to stitch, *defaults to 1*
+- **delimiter** *(optional)*: the character or word to join stitched letters with, *defaults to -*
 
 Examples
 ^^^^^^^^
 
 - Stitch last word
 
-    - this is a test{:stitch_last_word} → this is a t-e-s-t
+  - this is a test{:stitch_last_word} → this is a t-e-s-t
+
 - Stitch last 2 words
 
-    - my name is John Doe{:stitch_last_word:2} → my name is J-o-h-n D-o-e
+  - my name is John Doe{:stitch_last_word:2} → my name is J-o-h-n D-o-e
+
 - Stitch last word with custom delimiter
 
-    - I'm feeling fabulous{:stitch_last_word:1:✨} → I'm feeling f✨a✨b✨u✨l✨o✨u✨s
+  - I'm feeling fabulous{:stitch_last_word:1:✨} → I'm feeling f✨a✨b✨u✨l✨o✨u✨s
 
 Fingerspelling Alphabet
 =======================

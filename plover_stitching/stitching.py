@@ -1,4 +1,9 @@
+from plover.formatting import WORD_RX
+
 def stitch_word(word, delimiter='-'):
-    return ' '.join(
-        [delimiter.join(list(word)) for word in word.split(' ')]
-    )
+    text = ''
+    words = WORD_RX.findall(word)
+    for w in words:
+        sw = w.rstrip()
+        text += delimiter.join(w.rstrip()) + w[len(sw):]
+    return text
